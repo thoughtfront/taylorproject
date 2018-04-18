@@ -6,12 +6,14 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-
+gem 'foreman', '~> 0.84.0'
+gem 'thor', '~> 0.19.1'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.4'
 gem 'pg', '~> 1.0.0'
 gem 'passenger', '~> 5.2.3'
 gem 'clearance', '~> 1.16.1'
+gem 'sidekiq', '~> 5.1.3'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0.7'
