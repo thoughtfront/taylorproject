@@ -17,6 +17,9 @@
 !/log/.keep
 !/tmp/.keep
 
+*.pid*
+*.pid
+
 /node_modules
 /yarn-error.log
 
@@ -24,3 +27,6 @@
 
 .nvmrc
 .ruby-version
+.ruby-gemset
+
+.notes

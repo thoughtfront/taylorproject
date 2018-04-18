@@ -5,7 +5,7 @@ default: &default
 
 development:
   <<: *default
-  database: development_talorproject
+  database: development_taylorproject
   pool: <%= ENV['DB_POOL'] || 10 %>
   timeout: <%= ENV['DB_TIMEOUT'] || 10 %>
   reaping_frequency: <%= ENV['DB_REAP_FREQ'] || 10 %>
