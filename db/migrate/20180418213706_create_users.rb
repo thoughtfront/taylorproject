@@ -1,6 +1,6 @@
 class CreateUsers < ActiveRecord::Migration[5.1]
   def change
-    create_table :users do |t|
+    create_table :users, id: :uuid, default: "uuid_generate_v4()", force: true do |t|
       t.timestamps null: false
       t.string :email, null: false
       t.string :encrypted_password, limit: 128, null: false
@@ -11,6 +11,8 @@ class CreateUsers < ActiveRecord::Migration[5.1]
       t.datetime :locked_at
       t.inet :last_sign_in_ip
       t.datetime :last_sign_in_at
+      
+      t.uuid :person_id
 
       t.timestamps null: false
     end
