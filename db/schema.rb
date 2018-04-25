@@ -31,8 +31,8 @@ ActiveRecord::Schema.define(version: 20180419214136) do
 
   create_table "people", id: :uuid, default: -> { "uuid_generate_v4()" }, force: :cascade do |t|
     t.string "prefix"
-    t.string "first_name"
-    t.string "middle_name"
+    t.string "first_name", null: false
+    t.string "middle_name", null: false
     t.string "last_name"
     t.string "suffix"
     t.string "gender"

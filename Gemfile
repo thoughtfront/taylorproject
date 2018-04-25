@@ -15,6 +15,8 @@ gem 'passenger', '~> 5.2.3'
 gem 'clearance', '~> 1.16.1'
 gem 'sidekiq', '~> 5.1.3'
 
+gem 'haml-rails', '~> 1.0.0'
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0.7'
 # Use Uglifier as compressor for JavaScript assets
