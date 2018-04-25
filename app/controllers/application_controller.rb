@@ -15,4 +15,9 @@ class ApplicationController < ActionController::Base
       user.save
     end
   end
+
+  def sign_out
+    Thread.current[:user] = nil
+    super
+  end
 end
