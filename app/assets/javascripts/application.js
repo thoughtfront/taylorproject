@@ -14,6 +14,7 @@
 //= require turbolinks
 //= require react
 //= require react_ujs
+//= require materialize
 //= require_tree ./app
 //= require components
 //= require_tree .
