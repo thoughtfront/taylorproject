@@ -17,4 +17,5 @@
 //= require materialize
 //= require_tree ./app
 //= require components
+//= require pages
 //= require_tree .
