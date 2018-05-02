@@ -14,3 +14,28 @@ img.sign-in-logo {
 .text-right {
   text-align: right;
 }
+
+
+div{
+  &.auth-enter-active.card-panel, &.auth-enter-done.card-panel {
+    opacity: 1;
+  	-moz-transform: rotateY(0deg);
+  	-webkit-transform: rotateY(0deg);
+  	-ms-transform: rotateY(0deg);
+  	transform: rotateY(0deg);
+  	-moz-transition: opacity 500ms ease, -moz-transform 500ms ease;
+  	-webkit-transition: opacity 500ms ease, -webkit-transform 500ms ease;
+  	-ms-transition: opacity 500ms ease, -ms-transform 500ms ease;
+  	transition: opacity 500ms ease, transform 500ms ease;
+  }
+}
+
+div{
+  &.auth-enter.card-panel {
+    opacity: 0;
+    -moz-transform: rotateY(30deg);
+    -webkit-transform: rotateY(30deg);
+    -ms-transform: rotateY(30deg);
+    transform: rotateY(30deg);
+  }
+}
