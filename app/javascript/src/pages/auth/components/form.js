@@ -1,19 +1,16 @@
+import React from "react"
+import PropTypes from "prop-types"
 
-Auth.Form = createReactClass({
-  propTypes: {
-    url: PropTypes.string,
-    buttonText: PropTypes.string,
-    type: PropTypes.string,
-  },
-
-  getInitialState: function() {
-    return {
-      email: `${this.props.type}[email]`,
-      password: `${this.props.type}[password]`,
+class Form extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      email: `${props.type}[email]`,
+      password: `${props.type}[password]`,
     }
-  },
+  }
 
-  render: function() {
+  render () {
     let meta = document.querySelector('meta[name="csrf-token"]').content;
     return (
       <form id='auth' action={this.props.url} method="post">
@@ -38,5 +35,12 @@ Auth.Form = createReactClass({
         </div>
       </form>
     );
-  },
-});
+  }
+}
+
+Form.propTypes = {
+  url: PropTypes.string,
+  buttonText: PropTypes.string,
+  type: PropTypes.string,
+};
+export default Form
