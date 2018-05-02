@@ -23,6 +23,7 @@ gem 'sass-rails', '~> 5.0.7'
 gem 'uglifier', '>= 4.1.9'
 
 gem 'react-rails', '~>2.4.4'
+gem 'webpacker', '~> 3.5', '>= 3.5.2'
 gem 'sprockets-rails', '~> 3.2.1'
 
 

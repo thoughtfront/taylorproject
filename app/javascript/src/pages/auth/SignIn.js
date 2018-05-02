@@ -1,10 +1,9 @@
-Pages.SignIn = createReactClass({
-  propTypes: {
-    submitUrl: PropTypes.string,
-    signupUrl: PropTypes.string,
-  },
+import React from "react"
+import PropTypes from "prop-types"
+import Form from "./components/form"
 
-  render: function() {
+class SignIn extends React.Component {
+  render () {
     return (
       <div className='container'>
         <div className='row'>
@@ -23,7 +22,7 @@ Pages.SignIn = createReactClass({
               </div>
               <div className='row'>
                 <div className='col s12'>
-                  <Auth.Form url={this.props.submitUrl} buttonText='Sign In' type='session'></Auth.Form>
+                  <Form url={this.props.submitUrl} buttonText='Sign In' type='session'></Form>
                 </div>
               </div>
               <div className='forgot text-right'>
@@ -36,5 +35,11 @@ Pages.SignIn = createReactClass({
         </div>
       </div>
     );
-  },
-});
+  }
+}
+
+SignIn.propTypes = {
+  submitUrl: PropTypes.string,
+  signupUrl: PropTypes.string
+};
+export default SignIn
