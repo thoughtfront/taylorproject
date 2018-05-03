@@ -23,6 +23,7 @@ config.webpacker.check_yarn_integrity = true
     config.public_file_server.headers = {
       'Cache-Control' => "public, max-age=#{2.days.seconds.to_i}"
     }
+    # config.public_file_server.enabled = true
   else
     config.action_controller.perform_caching = false
 
