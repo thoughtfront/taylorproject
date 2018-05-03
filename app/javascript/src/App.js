@@ -12,6 +12,7 @@ class App extends React.Component {
     }
   }
 
+  // Get the react component from the page object
   getPage() {
     var ns = this.state.page.split('.')
     var comp = Pages
@@ -33,8 +34,12 @@ class App extends React.Component {
 }
 
 App.propTypes = {
-  page: PropTypes.string,
+  page: PropTypes.string.isRequired,
   data: PropTypes.object,
+}
+
+App.defaultProps = {
+  data: {},
 }
 
 
