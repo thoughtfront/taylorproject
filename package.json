@@ -1,6 +1,13 @@
 {
   "name": "taylorproject",
   "private": true,
+  "engines": {
+    "node": ">= 8.10.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/thoughtfront/taylorproject.git"
+  },
   "dependencies": {
     "@rails/webpacker": "3.5",
     "babel-preset-react": "^6.24.1",
@@ -14,6 +21,8 @@
   },
   "devDependencies": {
     "redux-devtools": "^3.4.1",
+    "redux-devtools-dock-monitor": "^1.1.3",
+    "redux-devtools-log-monitor": "^1.4.0",
     "webpack-dev-server": "2.11.2"
   }
 }

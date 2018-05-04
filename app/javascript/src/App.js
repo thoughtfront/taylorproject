@@ -1,6 +1,9 @@
 import React from "react"
 import PropTypes from "prop-types"
 import Pages from "./pages"
+import { Provider } from 'react-redux'
+import configureStore from './store/configureStore'
+import DevTools from './dev/dev_tools'
 
 class App extends React.Component {
 
@@ -24,11 +27,15 @@ class App extends React.Component {
   }
 
   render() {
+    const store = configureStore()
     var Page = this.getPage();
     return (
-      <div>
-        <Page {...this.state.data}></Page>
-      </div>
+      <Provider store={store}>
+        <div>
+          <Page {...this.state.data}></Page>
+          <DevTools />
+        </div>
+      </Provider>
     )
   }
 }
