@@ -1,10 +1,6 @@
-import { compbineReduers } from 'redux'
+import { combineReducers } from 'redux'
 import * as reducers from './reducers'
 
-// const AppReducer = combineReducers(reducers);
-const AppReducer = function(state = {}, action) {
-
-  return state
-}
+const AppReducer = combineReducers(reducers);
 
 export default AppReducer

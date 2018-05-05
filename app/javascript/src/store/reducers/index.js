@@ -1,3 +1,5 @@
-export default {
-  user: require('./user').default,
+import user from './user'
+
+export {
+  user,
 }

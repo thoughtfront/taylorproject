@@ -1,4 +1,4 @@
-const user = function(state, action) {
+function user(state = {}, action) {
   switch (action.type) {
     case "ADD_USER":
       return Object.assign({}, state, {user: action.user})
