@@ -12,7 +12,6 @@ class Test extends React.Component {
 }
 
 Test.propTypes = {
-  submitUrl: PropTypes.string,
-  signupUrl: PropTypes.string
+  
 };
 export default Test
