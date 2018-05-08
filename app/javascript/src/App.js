@@ -9,6 +9,7 @@ class App extends React.Component {
 
   constructor(props) {
     super(props)
+    console.log('App', window.App);
     this.state = {
       page: props.page,
       data: props.data,

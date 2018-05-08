@@ -20,4 +20,11 @@ class User < ApplicationRecord
 
   has_one :person
 
+  def secure_copy
+    copy = self.clone
+    copy.confirmation_token = nil
+    copy.encrypted_password = nil
+    copy.remember_token = nil
+    copy
+  end
 end

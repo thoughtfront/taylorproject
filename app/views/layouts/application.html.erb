@@ -15,4 +15,7 @@
       <%= yield %>
     </div>
   </body>
+  <script>
+    App.current_user = <%=raw current_user.present? ? current_user.secure_copy.to_json : "null" %>;
+  </script>
 </html>
