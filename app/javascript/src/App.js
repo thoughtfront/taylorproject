@@ -27,7 +27,8 @@ class App extends React.Component {
   }
 
   render() {
-    const store = configureStore()
+    const store = configureStore(window.App.initial_state)
+    window.store = store;
     var Page = this.getPage();
     return (
       <Provider store={store}>
