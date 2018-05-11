@@ -18,7 +18,7 @@
 class User < ApplicationRecord
   include Clearance::User
 
-  has_one :person
+  belongs_to :person
 
   def secure_copy
     copy = self.clone
