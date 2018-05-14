@@ -9,9 +9,12 @@ class App extends React.Component {
 
   constructor(props) {
     super(props)
+    const store = configureStore(window.App.initial_state)
+    window.store = store
     this.state = {
       page: props.page,
       data: props.data,
+      store: store,
     }
   }
 
@@ -27,11 +30,9 @@ class App extends React.Component {
   }
 
   render() {
-    const store = configureStore(window.App.initial_state)
-    window.store = store;
     var Page = this.getPage();
     return (
-      <Provider store={store}>
+      <Provider store={this.state.store}>
         <div>
           <Page {...this.state.data}></Page>
           <DevTools />

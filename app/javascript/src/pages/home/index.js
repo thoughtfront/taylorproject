@@ -1,14 +1,19 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
+import Example from '../../dev/example'
+
 class Main extends React.Component {
   render() {
     return (
-      <React.Fragment>
+      <div className='container'>
         <h1>
           {this.props.text}
         </h1>
-      </React.Fragment>
+        <div>
+          <Example />
+        </div>
+      </div>
     );
   }
 }

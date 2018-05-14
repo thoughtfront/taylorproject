@@ -1,5 +1,8 @@
 :javascript
   App.initial_state = {
+    example: {
+      count: 0,
+    },
     session: {
       user: #{raw current_user.present? ? current_user.secure_copy.to_json : "null"},
       person: #{raw current_user.present? ? current_user.person.to_json : "null"},
