@@ -18,6 +18,13 @@
 class User < ApplicationRecord
   include Clearance::User
 
-  has_one :person
+  belongs_to :person
 
+  def secure_copy
+    copy = self.clone
+    copy.confirmation_token = nil
+    copy.encrypted_password = nil
+    copy.remember_token = nil
+    copy
+  end
 end

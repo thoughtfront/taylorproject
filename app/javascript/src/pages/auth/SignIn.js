@@ -4,7 +4,7 @@ import Form from "./components/form"
 import { CSSTransition } from "react-transition-group"
 
 class SignIn extends React.Component {
-  
+
   constructor(props) {
     super(props)
     this.state = {
@@ -55,6 +55,6 @@ class SignIn extends React.Component {
 
 SignIn.propTypes = {
   submitUrl: PropTypes.string,
-  signupUrl: PropTypes.string
+  signupUrl: PropTypes.string,
 };
 export default SignIn
